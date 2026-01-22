@@ -1,0 +1,21 @@
+function appendValue(value) {
+  document.getElementById("display").value += value;
+}
+
+function clearDisplay() {
+  document.getElementById("display").value = "";
+}
+
+function calculateResult() {
+  try {
+    document.getElementById("display").value =
+  eval(document.getElementById("display").value);
+  } catch (e) {
+    alert("Invalid expression");
+  }
+}
+
+function deleteLast() {
+  let current = document.getElementById("display").value;
+  document.getElementById("display").value = current.slice(0, -1);
+}
